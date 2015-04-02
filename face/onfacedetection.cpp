@@ -1,5 +1,7 @@
 /**
  * Face detection class
+ *
+ * @author juanvallejo
  */
 
 #include "onfacedetection.h"
