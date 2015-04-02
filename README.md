@@ -3,6 +3,10 @@ naoqi-nao-development
 
 Development journal for nao robots (with Dr. Flores). This project aims to learn and implement as much of the NAOqi SDK as possible.
 
+###Downloads
+
+- [Download the SDK](https://community.aldebaran.com/en/resources/software)
+
 ###Resources
 
 - [NAOqi SDK](http://doc.aldebaran.com/2-1/ref/index.html)
