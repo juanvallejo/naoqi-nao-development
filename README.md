@@ -27,10 +27,25 @@ The following, are `C++` modules that have been completed by the team so far.
 
 This repo comes with a few `C++` modules, `hello` and `face` are two of them. To get started, make sure you have `naoqi-sdk-2.1.2.17` installed, and your `qitoolchain` is configured to use it.
 
-- Make sure you have `qibuild` and `qisrc` installed. Clone this repository, and `cd` into it.
+- Make sure you have `qibuild`, `qitoolchain`, and `qisrc` installed. Clone this repository, and `cd` into it.
 
-- Then, link all dependencies to the module by typing `qibuild configure <module_name>`
+Link your project to the `C++ SDK` by typing
+
+```
+qitoolchain create <give_toolchain_a_name_here> <path_to_c++_sdk_location>/toolchain.xml
+```
+
+Then, configure your workspace to use this new toolchain:
+
+```
+qibuild config --wizard
+```
+
+Follow the instructions that appear, and when prompted to, select your newly made toolchain.
+
+- Then, link all dependencies to the modules by typing `qibuild configure <module_name>`
 - Finally, build the module by typing `qibuild make <module_name>`
+- If you wish to create a module of your own, 
 
 A detailed guide on setting up your work environment, and builing modules from scratch will be posted in the `docs` soon.
 
