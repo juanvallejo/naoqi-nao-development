@@ -41,7 +41,7 @@ void OnFaceDetection::init() {
 
 		if(fFaces.getSize() < 2) {
 			qiLogInfo("module.face") << "No faces detected" << std::endl;
-			fTextToSpeechProxy.say("I can't see you.");
+			fTextToSpeechProxy.say("I... can't... see you.");
 		}
 
 		// subscribe to "FaceDetected" event, with the appropriate callback function
@@ -70,7 +70,8 @@ void OnFaceDetection::callback() {
 			// faces detected, then advertise that the robot cannot see the person / people anymore
 			if(fFaceCount != 0) {
 				qiLogInfo("module.face") << "No faces detected" << std::endl;
-				fTextToSpeechProxy.say("Where. are. you? \\vct=5\\\\rspd=10\\\\pau=200\\I\\pau=50\\ am\\pau=50\\ coming\\pau=20\\ for\\pau=20\\ you.\\pau=1500\\ you\\pau=30\\ can\\pau=30\\ run\\pau=30\\ but\\pau=30\\ you\\pau=20\\ can't\\pau=30\\\\vct=1\\ hide");
+				// fTextToSpeechProxy.say("Where. are. you? \\vct=5\\\\rspd=10\\\\pau=200\\I\\pau=50\\ am\\pau=50\\ coming\\pau=20\\ for\\pau=20\\ you.\\pau=1500\\ you\\pau=30\\ can\\pau=30\\ run\\pau=30\\ but\\pau=30\\ you\\pau=20\\ can't\\pau=30\\\\vct=1\\ hide");
+				fTextToSpeechProxy.say("Hey! Where'd you \\vct=120\\go!?");
 				fFaceCount = 0;
 			}
 
