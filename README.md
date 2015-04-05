@@ -45,9 +45,7 @@ Follow the instructions that appear, and when prompted to, select your newly mad
 
 - Then, link all dependencies to the modules by typing `qibuild configure <module_name>`
 - Finally, build the module by typing `qibuild make <module_name>`
-- If you wish to create a module of your own, 
-
-A detailed guide on setting up your work environment, and builing modules from scratch will be posted in the `docs` soon.
+- If you wish to create a module of your own, type `qisrc create <name_of_new_module>` 
 
 ### Adding Modules
 
