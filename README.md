@@ -23,18 +23,55 @@ The following, are `C++` modules that have been completed by the team so far.
 - `face`
 - `video` (work in progress)
 
-### Running Modules
+### Setting Up Workspace
 
 This repo comes with a few `C++` modules, `hello` and `face` are two of them. To get started, make sure you have `naoqi-sdk-2.1.2.17` installed, and your `qitoolchain` is configured to use it.
 
 - Make sure you have `qibuild` and `qisrc` installed. Clone this repository, and `cd` into it.
-- Then, add the two modules (that should already be present in your current folder) to the `worktree` by typing `qisrc add <module_name>`
+
 - Then, link all dependencies to the module by typing `qibuild configure <module_name>`
 - Finally, build the module by typing `qibuild make <module_name>`
 
-To run a module, simply type `qibuild run <module_name>`. Please note that if the module is a remote module (pretty much all of them are), you will need to pass arguments to it when running it, specifying the **IP address** of the robot. To do so, run it by typing `qibuild run <module_name> -- --pip <IP_ADDRESS>`. 
-
 A detailed guide on setting up your work environment, and builing modules from scratch will be posted in the `docs` soon.
+
+### Adding Modules
+
+You must add these modules to your workspace before you can build and run them.
+
+- To add modules (that should already be present in your current folder) to the `worktree`, type:
+ 
+```
+qisrc add <module_name>
+```
+
+### Building Modules
+
+To build a specific module, make sure it's been added to your worktree. Then link its dependencies:
+
+```
+qibuild configure <module_name>
+```
+
+And run `make` on it:
+
+```
+qibuild make <module_name>
+```
+
+### Running Modules
+
+To run a module, simply type:
+```
+qibuild run <module_name>
+```
+
+Please note that if the module is a remote module (pretty much all of them are), you will need to pass arguments to it when running it, specifying the **IP address** of the robot. To do so, run it by typing:
+
+```
+qibuild run <module_name> -- --pip <IP_ADDRESS>
+``` 
+
+**Make note of the double dashes** before the first argument. These *escape* the rest of the dashes before each flag.
 
 ###Project members
 
